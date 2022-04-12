@@ -56,7 +56,9 @@ public class BankerDAOPostgresImpl implements BankerDAO{
 
             return banker;
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println("Invalid Input");
+            System.out.println("");
+            //e.printStackTrace();
             return null;
         }
     }

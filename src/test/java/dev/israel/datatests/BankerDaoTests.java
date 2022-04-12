@@ -14,7 +14,7 @@ public class BankerDaoTests {
     @Test
     @Order(1)
     void createUserTest(){
-        Banker jonathan = new Banker(50,"a","bb", "a", "a",2000);
+        Banker jonathan = new Banker(50,"joreese","saveReese123", "Joshua", "Reese",2000);
         Banker savedBanker = bankerDAO.createBanker(jonathan);
         BankerDaoTests.testBanker = savedBanker;
         Assertions.assertNotEquals(0,savedBanker.getId());
