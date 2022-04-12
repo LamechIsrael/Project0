@@ -34,8 +34,6 @@ public class BankerDaoTests {
         bankerDAO.updateFunds(testBanker);
 
         Assertions.assertEquals(2200, testBanker.getBalance());
-
-
     }
 
     @Test

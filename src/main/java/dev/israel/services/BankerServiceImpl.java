@@ -15,6 +15,7 @@ public class BankerServiceImpl implements BankerService{
     @Override
     public Banker newBanker(Banker banker) {
         return this.bankerDAO.createBanker(banker);
+
     }
 
     @Override
@@ -25,17 +26,23 @@ public class BankerServiceImpl implements BankerService{
 
     @Override
     public Banker withdrawFunds(Banker banker, double amount) {
-        if(banker.getBalance()>=amount) {
-            banker.setBalance(banker.getBalance() - amount);
-            this.bankerDAO.updateFunds(banker);
-        }else System.out.println("Not enough funds.");
+        if(amount>0){
+            if(banker.getBalance()>=amount) {
+                banker.setBalance(banker.getBalance() - amount);
+                this.bankerDAO.updateFunds(banker);
+            }else System.out.println("Not enough funds.");
+        }else System.out.println("Not a valid amount.");
+
         return banker;
     }
 
     @Override
     public Banker depositFunds(Banker banker, double amount) {
-        banker.setBalance(banker.getBalance() + amount);
-        this.bankerDAO.updateFunds(banker);
+        if(amount>0){
+            banker.setBalance(banker.getBalance() + amount);
+            this.bankerDAO.updateFunds(banker);
+        }else System.out.println("Not a valid amount.");
+
 
         return banker;
     }
