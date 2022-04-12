@@ -80,14 +80,14 @@ public class App {
     // Withdraw, Deposit, or Check Balance
     public static void loggedInChoices(){
         // Welcome Screen
-        System.out.println("What do you want to do today?");
+        System.out.println("\nWhat do you want to do today?");
         System.out.println("1. Check Balance \n2. Withdraw Funds \n3. Deposit Funds \n4. Exit");
         int choice = scanner.nextInt();
 
         switch (choice){
             // Check Balance
             case 1:{
-                System.out.println("You have " + banker.getBalance() + " dollars in the bank.");
+                System.out.printf("You have $%.2f in the bank.\n", banker.getBalance());
                 loggedInChoices();
             }break;
 
@@ -97,7 +97,7 @@ public class App {
                 double withdraw = scanner.nextDouble();
                 bankerService.withdrawFunds(banker, withdraw);
 
-                System.out.println("You now have " + banker.getBalance() + " dollars in the bank.");
+                System.out.printf("You have $%.2f in the bank.\n", banker.getBalance());
                 loggedInChoices();
             }break;
 
@@ -107,7 +107,7 @@ public class App {
                 double deposit = scanner.nextDouble();
                 App.bankerService.depositFunds(banker, deposit);
 
-                System.out.println("You now have " + banker.getBalance() + " dollars in the bank.");
+                System.out.printf("You have $%.2f in the bank.\n", banker.getBalance());
                 loggedInChoices();
             }break;
 
