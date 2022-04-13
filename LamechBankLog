@@ -1,1 +1,6 @@
 INFO Hello. Tue Apr 12 13:57:27 PDT 2022 
+INFO Yaah! Son of username me has logged in. Wed Apr 13 07:22:45 PDT 2022 
+INFO New banker James Sterling added to Bank. Wed Apr 13 07:47:46 PDT 2022 
+INFO James Sterling of username jostar has has deposited $100000.0. Wed Apr 13 07:48:12 PDT 2022 
+ERROR James Sterling of username jostar tried to withdraw more funds than availale. Wed Apr 13 07:48:41 PDT 2022 
+INFO James Sterling of username jostar has has withdrawn $1.0E8. Wed Apr 13 07:48:41 PDT 2022 
